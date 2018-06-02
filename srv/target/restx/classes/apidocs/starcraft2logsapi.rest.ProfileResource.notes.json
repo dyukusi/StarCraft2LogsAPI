@@ -1,0 +1,1 @@
+{"name":"starcraft2logsapi.rest.ProfileResource","operations":[{"path":"/profiles/{region}/{name}/{race}","httpMethod":"GET","notes":"","parameters":[]},{"path":"/profiles/update","httpMethod":"GET","notes":"","parameters":[]}]}

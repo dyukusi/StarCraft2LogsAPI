@@ -1,6 +1,12 @@
 src/main/java**starcraft2logsapi/AppModule.java**7db00e951a2b396b690d537a4e16a4d2**1527928719000
+src/main/java**starcraft2logsapi/Util.java**66accadbc9d13c40231fdafaf3ace0f2**1527931360000
+src/main/java**starcraft2logsapi/Region.java**2164534de4691bb5194f06c1c104a1b8**1527931539000
 src/main/java**starcraft2logsapi/Roles.java**4ad656a83ab3aa2d3800ec1335a714da**1527927443000
-src/main/java**starcraft2logsapi/rest/ProfileResource.java**ec3b9515e5e470f85d826f80e19d1e63**1527929597000
+src/main/java**starcraft2logsapi/Column.java**3e2ba716f8246962c7082d60e6ded547**1527930751000
+src/main/java**starcraft2logsapi/rest/ProfileResource.java**7a84ab866e11ea47a0d3960aa08e8d56**1527941045000
+src/main/java**starcraft2logsapi/Race.java**12d8149d6b9e00db25c9d38bb987c220**1527930430000
 src/main/java**starcraft2logsapi/AppServer.java**9bf4f629a8342494171c5359cb968932**1527927443000
 src/main/java**starcraft2logsapi/domain/Message.java**b76fde41e04f4510ce61eb90b84aad88**1527927443000
+src/main/java**starcraft2logsapi/DB.java**e8bc668155cbad59e4baae3511121b5b**1527935256000
+src/main/java**starcraft2logsapi/rest/LeagueResource.java**add709772b9069fff5220f1a212b9eaa**1527939054000
 src/main/java**starcraft2logsapi/rest/HelloResource.java**fbfbbd200e14492f72e5a5fdef1cd6fa**1527927443000

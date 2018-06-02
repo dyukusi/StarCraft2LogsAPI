@@ -1,0 +1,1 @@
+{"name":"starcraft2logsapi.rest.LeagueResource","operations":[{"path":"/leagues/{region}","httpMethod":"GET","notes":"","parameters":[]}]}
