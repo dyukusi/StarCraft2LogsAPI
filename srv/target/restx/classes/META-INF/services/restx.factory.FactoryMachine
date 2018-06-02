@@ -1,0 +1,4 @@
+starcraft2logsapi.AppModuleFactoryMachine
+starcraft2logsapi.rest.HelloResourceFactoryMachine
+starcraft2logsapi.rest.HelloResourceRouterFactoryMachine
+starcraft2logsapi.rest.ProfileResourceFactoryMachine

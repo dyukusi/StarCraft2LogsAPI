@@ -1,0 +1,177 @@
+2018-06-02 17:17:30,137 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2018-06-02 17:17:30,529 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2018-06-02 17:17:30,536 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2018-06-02 17:17:31,601 [pool-1-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 5 sources compiled in 966.7 ms
+2018-06-02 17:17:32,077 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/dyukusi/git/starcraft2logsapi/srv/.
+2018-06-02 17:17:37,971 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - sharing stats on http://stats.restx.io/api/v1/stats failed. Exception: java.net.SocketTimeoutException: connect timed out
+2018-06-02 17:17:37,977 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2018-06-02 17:17:38,071 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - collecting and sharing stats enabled - see http://restx.io/stats.html for details.
+2018-06-02 17:17:41,948 [qtp2050019814-24] [          ] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.0.1.Final
+2018-06-02 17:17:42,073 [qtp2050019814-24] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/ - per request factory created in 248.2 ms
+2018-06-02 17:17:42,495 [qtp2050019814-28] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> UNAUTHORIZED - 1.176 ms
+2018-06-02 17:17:42,496 [qtp2050019814-29] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> UNAUTHORIZED - 1.276 ms
+2018-06-02 17:17:47,674 [qtp2050019814-25] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] POST /sessions >> OK - 277.8 ms
+2018-06-02 17:17:47,850 [qtp2050019814-26] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 6.566 ms
+2018-06-02 17:17:47,852 [qtp2050019814-27] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 9.010 ms
+2018-06-02 17:18:37,246 [qtp2050019814-28] [admin     ] ERROR restx.StdRestxMainRouter - request raised NullPointerException: QUERY param <who> is required
+java.lang.NullPointerException: QUERY param <who> is required
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:226) ~[guava-18.0.jar:na]
+	at starcraft2logsapi.rest.HelloResourceRouter$3.doRoute(HelloResourceRouter.java:104) ~[classes/:na]
+	at starcraft2logsapi.rest.HelloResourceRouter$3.doRoute(HelloResourceRouter.java:98) ~[classes/:na]
+	at restx.entity.StdEntityRoute.handle(StdEntityRoute.java:250) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.ResponseCloserFilter.handle(ResponseCloserFilter.java:28) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.CacheFilter$1.handle(CacheFilter.java:51) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.security.RestxSessionLogFilter.handle(RestxSessionLogFilter.java:43) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.security.RestxSessionCookieFilter.handle(RestxSessionCookieFilter.java:100) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.stats.RestxStatsCollectionFilter.handle(RestxStatsCollectionFilter.java:39) ~[restx-stats-admin-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.StdRestxMainRouter.route(StdRestxMainRouter.java:153) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$PerRequestFactoryLoader.route(RestxMainRouterFactory.java:233) [restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$RecordingMainRouter.route(RestxMainRouterFactory.java:190) [restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$CompilationManagerRouter.route(RestxMainRouterFactory.java:342) [restx-core-0.35-rc4.jar:na]
+	at restx.servlet.AbstractRestxMainRouterServlet.service(AbstractRestxMainRouterServlet.java:48) [restx-servlet-0.35-rc4.jar:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:536) [jetty-security-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.Server.handle(Server.java:365) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635) [jetty-http-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628) [jetty-io-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52) [jetty-io-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+2018-06-02 17:18:37,273 [qtp2050019814-28] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /hello >> INTERNAL_SERVER_ERROR - 36.22 ms
+2018-06-02 17:19:07,863 [Thread-1        ] [          ] INFO  restx.stats.RestxStatsCollector - sharing stats on http://stats.restx.io/api/v1/stats failed. Exception: java.net.SocketTimeoutException: connect timed out
+2018-06-02 17:19:07,874 [Thread-1        ] [          ] INFO  o.e.j.s.listener.ELContextCleaner - javax.el.BeanELResolver purged
+2018-06-02 17:19:07,928 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2018-06-02 17:30:31,457 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2018-06-02 17:30:31,949 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2018-06-02 17:30:31,956 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2018-06-02 17:30:32,213 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/dyukusi/git/starcraft2logsapi/srv/.
+2018-06-02 17:30:38,187 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - sharing stats on http://stats.restx.io/api/v1/stats failed. Exception: java.net.SocketTimeoutException: connect timed out
+2018-06-02 17:30:38,192 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2018-06-02 17:30:38,251 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - collecting and sharing stats enabled - see http://restx.io/stats.html for details.
+2018-06-02 17:30:40,025 [qtp2050019814-24] [          ] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.0.1.Final
+2018-06-02 17:30:40,137 [qtp2050019814-24] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /hello - per request factory created in 227.4 ms
+2018-06-02 17:30:40,287 [qtp2050019814-24] [admin     ] ERROR restx.StdRestxMainRouter - request raised NullPointerException: QUERY param <who> is required
+java.lang.NullPointerException: QUERY param <who> is required
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:226) ~[guava-18.0.jar:na]
+	at starcraft2logsapi.rest.HelloResourceRouter$3.doRoute(HelloResourceRouter.java:104) ~[classes/:na]
+	at starcraft2logsapi.rest.HelloResourceRouter$3.doRoute(HelloResourceRouter.java:98) ~[classes/:na]
+	at restx.entity.StdEntityRoute.handle(StdEntityRoute.java:250) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.ResponseCloserFilter.handle(ResponseCloserFilter.java:28) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.CacheFilter$1.handle(CacheFilter.java:51) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.security.RestxSessionLogFilter.handle(RestxSessionLogFilter.java:43) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.security.RestxSessionCookieFilter.handle(RestxSessionCookieFilter.java:100) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.stats.RestxStatsCollectionFilter.handle(RestxStatsCollectionFilter.java:39) ~[restx-stats-admin-0.35-rc4.jar:na]
+	at restx.RestxHandlerMatch.handle(RestxHandlerMatch.java:56) ~[restx-core-0.35-rc4.jar:na]
+	at restx.StdRestxMainRouter.route(StdRestxMainRouter.java:153) ~[restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$PerRequestFactoryLoader.route(RestxMainRouterFactory.java:233) [restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$RecordingMainRouter.route(RestxMainRouterFactory.java:190) [restx-core-0.35-rc4.jar:na]
+	at restx.RestxMainRouterFactory$CompilationManagerRouter.route(RestxMainRouterFactory.java:342) [restx-core-0.35-rc4.jar:na]
+	at restx.servlet.AbstractRestxMainRouterServlet.service(AbstractRestxMainRouterServlet.java:48) [restx-servlet-0.35-rc4.jar:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:536) [jetty-security-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382) [jetty-servlet-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.Server.handle(Server.java:365) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635) [jetty-http-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628) [jetty-io-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52) [jetty-io-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.8.v20121106.jar:8.1.8.v20121106]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+2018-06-02 17:30:40,293 [qtp2050019814-24] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /hello >> INTERNAL_SERVER_ERROR - 155.3 ms
+2018-06-02 17:30:48,386 [qtp2050019814-24] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /message >> OK - 6.042 ms
+2018-06-02 17:30:54,086 [qtp2050019814-26] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /pojo >> NOT_FOUND - 1.345 ms
+2018-06-02 17:37:12,957 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 631.6 ms
+2018-06-02 17:37:22,487 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 162.0 ms
+2018-06-02 17:38:22,546 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 223.6 ms
+2018-06-02 17:38:42,434 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 111.4 ms
+2018-06-02 17:51:42,389 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 60.43 ms
+2018-06-02 17:51:52,374 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 44.57 ms
+2018-06-02 17:52:13,853 [Thread-1        ] [          ] INFO  restx.stats.RestxStatsCollector - sharing stats on http://stats.restx.io/api/v1/stats failed. Exception: java.net.SocketTimeoutException: connect timed out
+2018-06-02 17:52:13,864 [Thread-1        ] [          ] INFO  o.e.j.s.listener.ELContextCleaner - javax.el.BeanELResolver purged
+2018-06-02 17:52:13,918 [Thread-1        ] [          ] INFO  o.e.jetty.util.thread.ShutdownThread - shutdown already commenced
+2018-06-02 17:52:22,633 [main            ] [          ] INFO  org.eclipse.jetty.server.Server - jetty-8.1.8.v20121106
+2018-06-02 17:52:23,079 [main            ] [          ] INFO  restx.RestxMainRouterFactory - LOADING MAIN ROUTER
+2018-06-02 17:52:23,083 [main            ] [          ] INFO  restx.RestxMainRouterFactory - 
+--------------------------------------
+ -- RESTX >> LOAD ON REQUEST << >> DEV MODE << >> AUTO COMPILE <<
+ -- for admin console,
+ --   VISIT http://127.0.0.1:8080/api/@/ui/
+ --
+
+2018-06-02 17:52:23,252 [main            ] [          ] INFO  restx.classloader.CompilationManager - watching for changes in [src/main/java, src/main/resources]; current location is /Users/dyukusi/git/starcraft2logsapi/srv/.
+2018-06-02 17:52:28,629 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - sharing stats on http://stats.restx.io/api/v1/stats failed. Exception: java.net.SocketTimeoutException: connect timed out
+2018-06-02 17:52:28,634 [main            ] [          ] INFO  restx.monitor.MetricsConfiguration - registering Metrics JVM metrics
+2018-06-02 17:52:28,692 [main            ] [          ] INFO  restx.stats.RestxStatsCollector - collecting and sharing stats enabled - see http://restx.io/stats.html for details.
+2018-06-02 17:52:31,777 [qtp2050019814-24] [          ] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.0.1.Final
+2018-06-02 17:52:31,870 [qtp2050019814-24] [          ] INFO  restx.RestxMainRouterFactory - [RESTX REQUEST] GET /@/ui/factory/ - per request factory created in 211.1 ms
+2018-06-02 17:52:32,362 [qtp2050019814-27] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 10.42 ms
+2018-06-02 17:52:32,377 [qtp2050019814-28] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 23.63 ms
+2018-06-02 17:52:32,455 [qtp2050019814-27] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 2.183 ms
+2018-06-02 17:52:32,468 [qtp2050019814-28] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 2.504 ms
+2018-06-02 17:52:32,954 [qtp2050019814-26] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/factory >> OK - 505.7 ms
+2018-06-02 17:52:50,488 [qtp2050019814-24] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 1.819 ms
+2018-06-02 17:52:50,493 [qtp2050019814-28] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 3.096 ms
+2018-06-02 17:52:56,248 [qtp2050019814-29] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] DELETE /sessions/current >> OK - 69.60 ms
+2018-06-02 17:52:56,401 [qtp2050019814-24] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> UNAUTHORIZED - 675.6 μs
+2018-06-02 17:52:56,413 [qtp2050019814-28] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> UNAUTHORIZED - 1.267 ms
+2018-06-02 17:53:00,632 [qtp2050019814-26] [          ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] POST /sessions >> OK - 27.23 ms
+2018-06-02 17:53:00,767 [qtp2050019814-28] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /sessions/current >> OK - 1.651 ms
+2018-06-02 17:53:00,768 [qtp2050019814-25] [admin     ] INFO  restx.StdRestxMainRouter - << [RESTX REQUEST] GET /@/pages >> OK - 1.753 ms
+2018-06-02 17:53:23,863 [pool-2-thread-1 ] [          ] INFO  restx.classloader.CompilationManager - compilation finished: 1 sources compiled in 497.7 ms
